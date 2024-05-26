@@ -1,6 +1,6 @@
-base_model: 01-ai/Yi-34B-Chat
-model_type: LlamaForCausalLM
-tokenizer_type: LlamaTokenizer
+base_model: intervitens/internlm2-limarp-chat-20b
+model_type: AutoModelForCausalLM
+tokenizer_type: AutoTokenizer
 
 load_in_8bit: false
 load_in_4bit: true
@@ -17,7 +17,9 @@ special_tokens:
 
 # Data
 datasets:
-  - path: mhenrichsen/alpaca_2k_test
+  - path: athirdpath/DPO_Pairs-Roleplay-Alpaca-NSFW
+  - path: ResplendentAI/Alpaca_NSFW_Shuffled
+  - path: diffnamehard/toxic-dpo-v0.1-NoWarning-alpaca
     type: alpaca
 warmup_steps: 10
 
