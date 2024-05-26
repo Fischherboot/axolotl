@@ -1,13 +1,15 @@
-base_model: mistralai/Mistral-7B-v0.1
-model_type: MistralForCausalLM
-tokenizer_type: LlamaTokenizer
+base_model: intervitens/internlm2-limarp-chat-20b
+model_type: AutoModelForCausalLM
+tokenizer_type: AutoTokenizer
 
 load_in_8bit: false
 load_in_4bit: true
 strict: false
 
 datasets:
-  - path: mhenrichsen/alpaca_2k_test
+  - path: athirdpath/DPO_Pairs-Roleplay-Alpaca-NSFW
+  - path: ResplendentAI/Alpaca_NSFW_Shuffled
+  - path: diffnamehard/toxic-dpo-v0.1-NoWarning-alpaca
     type: alpaca
 dataset_prepared_path: last_run_prepared
 val_set_size: 0.1
